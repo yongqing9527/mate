@@ -89,3 +89,11 @@ meta指元素可提供有关页面的元信息（meta-information），比如针
 * maximum-scale - 允许用户缩放到的最大比例
 
 * user-scalable - 用户是否可以手动缩放 header 和 footer
+
+
+        $("body>*").on("touchstart",function(e){
+            let _con = $(".baMaYD_head_choose_c");   // 设置目标区域
+            if(!_con.is(e.target) && _con.has(e.target).length === 0){
+                _con.parent().removeClass("active");
+            }
+        });
